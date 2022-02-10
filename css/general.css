@@ -3,6 +3,9 @@ html, body{
     padding: 0;
     overflow: hidden;
 }
+html {
+    min-height: -webkit-fill-available;
+}
 body{
     color: #d8d8d8;
     background-color: #121213;
@@ -13,5 +16,5 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    min-height: --webkit-fill-available;
+    min-height: -webkit-fill-available;
 }

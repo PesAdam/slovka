@@ -1,5 +1,7 @@
 //DATA
 let word = '';
+let currentRow = document.querySelector('.row');
+
 
 
 //KLAVESNICOVANIE 
@@ -19,9 +21,23 @@ const submitWord = () => {
 
 const addLetter = (letter) => {
     word = word + letter
-    console.log(word)
+
+    let tile = currentTile()
+    tile.innerHTML = letter
+    
 }
 
 const removeLetter = () => {
+    let tile = currentTile()
+    tile.innerHTML = ''
     word = word.slice(0, -1);
+}
+
+// TILE TO UPDATE
+const currentTile = () => {
+    return currentRow.querySelector(':nth-child('+ word.length + ')')
+}
+
+const currentRow = () => {
+    return document.querySelector('.row');
 }
