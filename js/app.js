@@ -35,7 +35,7 @@ const removeLetter = () => {
 
 // TILE TO UPDATE
 const currentTile = () => {
-    return currentRow.querySelector(':nth-child('+ word.length + ')')
+    return currentRow().querySelector(':nth-child('+ word.length + ')')
 }
 
 const currentRow = () => {
